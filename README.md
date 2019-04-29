@@ -3,7 +3,7 @@
 This works:
 ```sh
 ibazel run bin # see contents of test.js
-echo "something" >> test.js
+echo "something" >> test.js # Run this in a different tab etc.
 # see updated contents of test.js in console
 ```
 
