@@ -1,0 +1,25 @@
+load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_test", "nodejs_binary")
+
+nodejs_test(
+    name = "test",
+    data = [
+        "test.js",
+        "test-runner.js",
+    ],
+    entry_point = "__main__/test-runner.js",
+    tags = [
+        "ibazel_notify_changes",
+    ],
+)
+
+nodejs_binary(
+    name = "bin",
+    data = [
+        "test.js",
+        "test-runner.js",
+    ],
+    entry_point = "__main__/test-runner.js",
+    tags = [
+        "ibazel_notify_changes",
+    ],
+)
